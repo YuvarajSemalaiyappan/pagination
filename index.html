@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=4.0">
+    <title>Pagination</title>
+    <link href="style.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <table border="1">
-<thead>
-    <th>S.no</th>
-    <td>Name</td>
-</thead>
-<tbody>
-<tr>
-    <td>1</td>
-    <td>Yuva</td>
-</tr>
-<tr>
-    <td>2</td>
-    <td>dharani</td>
-</tr>
+    <div class="Heading" id="head">
+        <h1>Pagination</h1>
+    </div>
+    <div class="select">
 
-<tr>
-    <td>3</td>
-    <td>ragu</td>
-</tr>
+        <label for="Rows">No Of Rows:</label>
+        <select id="rowSelection" name="No of Rows" onchange="generateButtons()">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+        </select>
+    </div>
 
-</tbody>
+    <div class="Data" id="dat">
+        <table border="1"> 
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </thead>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+    </div>
 
-    </table>
+    <div class="buttons" id="buttons"></div>
 
+    <script src="script1.js"></script>
 
 </body>
+
 </html>

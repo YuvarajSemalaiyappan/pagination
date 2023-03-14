@@ -549,8 +549,8 @@ function generateButtons() {
   var previousElement = document.createElement("button");
   previousElement.setAttribute("value", "previous");
   previousElement.innerText = "Previous";
-  previousElement.addEventListener("click", previousRecords);
-  buttonsElement.appendChild(previousElement);  
+  // previousElement.addEventListener("click", previousRecords);
+  // buttonsElement.appendChild(previousElement);  
 
   for (var i = 1; i <= noOfButtons; i++) {
     var buttonElement = document.createElement("button");
@@ -591,11 +591,11 @@ function records(t) {
 
 generateButtons();
 
-function previousRecords() {
-  var clear = document.getElementById("tableBody");
-  clear.innerText = "";
-  var e = document.getElementById("rowSelection");
-  var numberOfRecordsPerPage = parseInt(e.value);
-  var currentButton = document.querySelector("#buttons button.active");
-  var previousButtonValue = parseInt(currentButton.value) - 1;
-  var startingIndexForEachPage
+// function previousRecords() {
+//   var clear = document.getElementById("tableBody");
+//   clear.innerText = "";
+//   var e = document.getElementById("rowSelection");
+//   var numberOfRecordsPerPage = parseInt(e.value);
+//   var currentButton = document.querySelector("#buttons button.active");
+//   var previousButtonValue = parseInt(currentButton.value) - 1;
+//   var startingIndexForEachPage
